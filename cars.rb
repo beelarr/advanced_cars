@@ -40,23 +40,51 @@ available_car_colors = [
 
 auto_hash = {}
 model_hash = {}
+make_hash = {}
+models_hash = {}
 master_hash = {}
+color_array = []
+
 
 makes.each do |make|
-  # p make[0]
-  models.each do |model|
-    # p model[-1]
-    if make[0] == model[-1]
-      auto_hash[make] = make
-      model_hash[model] = model
-      master_hash[auto_hash] = model_hash
-      # p "Auto Hash #{auto_hash}"
-      # p "Model Hash #{model_hash}"
+  make_hash[make] = model_hash
+  # p "Make hash #{make_hash}"
+end
+
+models.each do |model|
+  model_hash[model] = color_array
+  # p "Model hash #{model_hash}"
+end
+
+
+
+make_hash.each do |make|
+  # p "Here are the #{make}"
+  model_hash.each do |model|
+    if model[0][-1] == make[0][0]
 
     end
   end
 end
-      puts master_hash
+
+# puts master_hash
+
+# makes.each do |make|
+#   auto_hash[make] = model_hash
+# end
+# p auto_hash
+#
+
+# makes.each do |make|
+#   models.each do |model|
+#     if make[0] == model[-1]
+#       auto_hash[make] = model
+#       p auto_hash
+#     end
+#   end
+# end
+#
+#       puts auto_hash
 #   colors.each do |color|
 #   available_car_colors.each do |avail_colors|
 #   end
@@ -67,3 +95,7 @@ end
 #
 #
 # = (model_hash[model] = color)
+      # p "Auto Hash #{auto_hash}"
+      # model_hash[model] = model
+      # p "Model Hash #{model_hash}"
+      # master_hash[auto_hash] = model_hash
