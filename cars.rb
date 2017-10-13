@@ -59,15 +59,54 @@ end
 
 
 make_hash.each do |make|
-  # p "Here are the #{make}"
+  # p "Here are the #{make[0][0]}"
   model_hash.each do |model|
     if model[0][-1] == make[0][0]
-
+    c = make.merge(model)
+      puts c
     end
   end
 end
 
-# puts master_hash
+puts master_hash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# cool but doesnt work in this instance
+# makes.each do |make|
+#   models.each do |model|
+#     case model
+#     when [5, "Prius", 1]
+#       p 'Toyota' => {make => color_array}
+#     when model[-1] == 2
+#       p 'Nissan' => {make => color_array}
+#     when model[-1] == 3
+#       p 'Ford' => {make => color_array}
+#     when model[-1]  == 4
+#       p 'Mini' => {make => color_array}
+#     when model[-1]  == 5
+#       p 'Honda' => {make => color_array}
+#     when model[-1] == 6
+#       p 'Dodge' => {make => color_array}
+#     end
+#   end
+# end
+
+
+
+
+
 
 # makes.each do |make|
 #   auto_hash[make] = model_hash
